@@ -1,0 +1,26 @@
+<div class="bs-callout bs-callout-info">
+    <h4>Apps</h4>
+    <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
+</div>
+
+<div class="row-fluid" style="margin-bottom: 10px;">
+	<a ng-click="navNewApp()" class="btn btn-primary">New</a>
+</div>
+
+<div class="row-fluid">
+	<table class="table">
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Desc</th>
+			<th>Language</th>
+			<th>Actions</th>
+		<tr ng-repeat="app in data.apps">
+			<td>{{  app.id }}</td>
+			<td>{{  app.name }}</td>
+			<td>{{  app.desc }}</td>
+			<td>{{  app.language }}</td>
+			<td><a href="">Edit</a> <a href="">Delete</a></td>
+		</tr>
+	</table>
+</div>

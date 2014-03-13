@@ -1,0 +1,20 @@
+ENV['APIDOCS_MONGOLAB_URI'] = 'mongodb://vajapravin:UPUAv8LfbJbxz6SrYu@ds053497.mongolab.com:53497/api_docs_development'
+# --app apidocsangmongo
+
+ENV['APIDOCS_BITBUCKET_KEY'] = 'UPUAv8LfbJbxz6SrYu'
+# --app apidocsangmongo
+
+ENV['APIDOCS_BITBUCKET_SECRET'] = 'JMZqZHnv8qP7KAgWDZyqN3KAYjmVFhTG'
+# --app apidocsangmongo
+
+ENV['APIDOCS_GITHUB_KEY'] = '4fd64d9520750e49865e'
+# --app apidocsangmongo
+
+ENV['APIDOCS_GITHUB_SECRET'] = 'd8aa9d939e99893d18ab91d57c0f27f22207b647'
+# --app apidocsangmongo
+
+ENV['APIDOCS_DEVISE_SECRET_KEY'] = '8b8bb0c1089269fa71cf9af3af75ad61bf0671604613cfb6b9204c16d5cd462b18b8bf0c215f9548aa77f78d7ae4035bc307307b725719810ccd3ea4a05da85a'
+# --app apidocsangmongo
+
+ENV['APIDOCS_SECRET_KEY_BASE'] = '2369e27f7dcde878a8186e47ead45ed4d251d62bbf087c8399baf3e48ad6d5aef0029252f5895e0ce59d1c95da7ce112ddb9195fc30bd66ae06708a6b77e8727'
+ # --app apidocsangmongo

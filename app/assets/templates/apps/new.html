@@ -1,0 +1,43 @@
+<div class="bs-callout bs-callout-info">
+    <h4>Apps</h4>
+    <p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
+</div>
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+    		<label class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+	      		<input type="text" ng-model="formData.name" class="form-control" id="inputName" placeholder="App Name" required autofocus="true">
+    		</div>
+  	</div>
+	<div class="form-group">
+	    	<label for="inputPassword" class="col-sm-2 control-label">Description</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" ng-model="formData.desc" rows="3" id="textareaDesc"></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+	    	<label for="inputPassword" class="col-sm-2 control-label">Language</label>
+		<div class="col-sm-10">
+			<select class="form-control" id="language" ng-model="formData.language" required>
+				<option value="">Select Language</option>
+				<option value="ColdFusion">ColdFusion</option>
+				<option value="ASP.NET">ASP.NET</option> 
+				<option value="CGI">CGI</option>
+				<option value="JSP">JSP</option>
+				<option value="Perl">Perl</option>
+				<option value="PHP">PHP</option>
+				<option value="PHP/Python">PHP/Python</option>
+				<option value="Python">Python</option> 
+				<option value="Ruby on Rails">Ruby on Rails</option>
+				<option value="Scala/Java">Scala/Java</option>
+				<option value="SSI">SSI</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-10">
+			<button class="btn btn-primary" ng-click="createApp()">Create</button>
+			<button class="btn" ng-click="listAllApps()">Back</button>
+		</div>
+	</div>
+</form>

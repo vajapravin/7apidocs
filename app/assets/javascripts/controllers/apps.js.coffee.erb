@@ -1,0 +1,43 @@
+apiDocsApp = angular.module('apiDocsApp', ['ngRoute'])
+
+apiDocsApp.config(['$routeProvider', '$locationProvider', '$httpProvider', ($routeProvider, $locationProvider, $httpProvider) ->
+	$routeProvider
+		# list of all apps
+		.when('/apps', {
+			controller: 'AppsController',
+			templateUrl: "<%= asset_path 'apps/index.html' %>"
+		})
+
+		# create new app
+		.when('/apps/new', {
+			controller: 'AppsController',
+			templateUrl: "<%= asset_path 'apps/new.html' %>"
+		})
+
+		# default route
+		.otherwise('/', {
+			controller: 'ApplicationController',
+			templateUrl: "<%= asset_path 'apps/index.html' %>"
+		})
+])
+
+@AppsController = ($scope, $location, $http, serviceLoadApps) ->
+	
+	$scope.data = serviceLoadApps.data
+	if !serviceLoadApps.isLoaded
+		serviceLoadApps.loadApps()
+
+	$scope.listAllApps = ->
+		$location.url('/apps')
+
+	$scope.navNewApp = ->
+		$location.url('/apps/new')
+
+	$scope.createApp = ->
+		$http.post('/api/apps.json', { app: $scope.formData })
+		.success((data) ->
+			alert('Successfully created app')
+			$location.url('/apps')
+		).error( ->
+			console.log('Failed to create new post.')
+		)
